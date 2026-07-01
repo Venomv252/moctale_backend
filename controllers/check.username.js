@@ -6,6 +6,8 @@ export const checkusername = asyncHandler(async(req,res)=>{
 
     const available = await isAvailable("username", username);
 
+    console.log(available);
+
     res.status(200).json({
         success:true,
         available
