@@ -16,7 +16,8 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://moctale-frontend-q9bz.vercel.app"
+      "https://moctale-frontend-q9bz.vercel.app",
+      "https://moctale-frontend-fae3.vercel.app"
     ],
     credentials: true,
   })
