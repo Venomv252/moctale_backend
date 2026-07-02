@@ -4,6 +4,9 @@ import {
   adminLogin,
   adminLogout,
   getAdminProfile,
+  getAllUsers,
+  updateUserVerification,
+  deleteUser,
 } from "../controllers/admin.controller.js";
 
 import {verifyJWT} from "../middleware/verifyJWT.js";
@@ -22,5 +25,11 @@ router.use(verifyJWT, verifyAdmin);
 router.post("/logout", adminLogout);
 
 router.get("/me", getAdminProfile);
+
+router.get("/users", getAllUsers);
+
+router.patch("/users/:userId/verify", updateUserVerification);
+
+router.delete("/users/:userId", deleteUser);
 
 export default router;

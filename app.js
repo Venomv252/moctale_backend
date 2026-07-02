@@ -14,7 +14,10 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173",
+      "https://moctale-frontend-q9bz.vercel.app"
+    ],
     credentials: true,
   })
 );
